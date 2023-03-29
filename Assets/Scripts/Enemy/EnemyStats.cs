@@ -13,6 +13,8 @@ public class EnemyStats : MonoBehaviour
     HitEffect effect;
     Rigidbody2D rb;
 
+    public float damage;
+
     public float knockBackForceX, knockBackForceY;
     public Transform player;
 
