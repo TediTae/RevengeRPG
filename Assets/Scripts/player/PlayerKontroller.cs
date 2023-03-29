@@ -22,6 +22,12 @@ public class PlayerKontroller : MonoBehaviour
 
     public GameObject groundCheck;
 
+    public Transform attackPoint;
+    public float attackDistance;
+    public LayerMask enemyLayers;
+    public float damage;
+
+
     void Start()
     {
 
@@ -116,6 +122,19 @@ public class PlayerKontroller : MonoBehaviour
         {
             anim.SetTrigger("Attack2");
         }
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackDistance, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+             enemy.GetComponent<EnemyStats>().TakeDamage(damage);
+        }
         
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.transform.position, groundCheckRadius);
+        Gizmos.DrawWireSphere(attackPoint.position, attackDistance);
     }
 }
