@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  jumpPower: 5
+  jumpPower: 7
   groundCheckRadius: 0.09
   attackRate: 1.5
   groundLayer:
