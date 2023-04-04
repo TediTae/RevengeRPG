@@ -49,7 +49,7 @@ public class PlayerKontroller : MonoBehaviour
         
         if (Time.time > nextAttack)
         {
-            if (Input.GetKeyDown(KeyCode.LeftControl))
+            if (Input.GetKeyDown(KeyCode.X))
             {
                 Attack();
                 nextAttack = Time.time + 1f / attackRate;
