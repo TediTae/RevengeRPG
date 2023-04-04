@@ -27,6 +27,9 @@ public class PlayerKontroller : MonoBehaviour
     public LayerMask enemyLayers;
     public float damage;
 
+    public GameObject ninjaStar;
+    public Transform firePoint;
+
 
     void Start()
     {
@@ -52,6 +55,8 @@ public class PlayerKontroller : MonoBehaviour
                 nextAttack = Time.time + 1f / attackRate;
             }
         }
+
+        Shoot();
        
     }
     private void FixedUpdate()
@@ -64,6 +69,18 @@ public class PlayerKontroller : MonoBehaviour
         movementDirection = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(movementDirection * speed, rb.velocity.y);
         anim.SetFloat("runSpeed", Mathf.Abs (movementDirection * speed));
+    }
+
+    public void Shoot()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (StarBank.instance.bankStar > 0)
+            {
+                Instantiate(ninjaStar, firePoint.position, firePoint.rotation);
+                StarBank.instance.bankStar -= 1;
+            }
+        }
     }
 
     void CheckAnimations()
