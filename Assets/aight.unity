@@ -2167,7 +2167,7 @@ GameObject:
   - component: {fileID: 858901325}
   m_Layer: 7
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15420,7 +15420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224783499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.077, y: 5.4949, z: 0}
+  m_LocalPosition: {x: -6.46, y: 5.22, z: 0}
   m_LocalScale: {x: 0.4273674, y: 1.115902, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17799,11 +17799,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5026434182781371969, guid: 21fc8c01c8f804ba29a6b1fb8ec7c627, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.815
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 5026434182781371969, guid: 21fc8c01c8f804ba29a6b1fb8ec7c627, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.579
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 5026434182781371969, guid: 21fc8c01c8f804ba29a6b1fb8ec7c627, type: 3}
       propertyPath: m_LocalPosition.z
