@@ -8,6 +8,8 @@ public class NinjaStar : MonoBehaviour
     Rigidbody2D rb;
     public float damage;
 
+    public GameObject groundEffect;
+
     public PlayerKontroller player;
 
     void Start()
@@ -31,6 +33,11 @@ public class NinjaStar : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponent<EnemyStats>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
+        else if (collision.CompareTag("Ground"))
+        {
+            Instantiate(groundEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
