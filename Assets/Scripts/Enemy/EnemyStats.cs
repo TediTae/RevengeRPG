@@ -25,6 +25,8 @@ public class EnemyStats : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    public float expToGive;
+
     // Update is called once per frame
     void Update()
     {
@@ -52,6 +54,7 @@ public class EnemyStats : MonoBehaviour
             currentHealth = 0;
             Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(gameObject);
+            Experince.instance.expMod(expToGive);
         }
     }
     
