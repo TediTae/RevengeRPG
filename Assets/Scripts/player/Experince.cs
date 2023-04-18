@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Experince : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Experince : MonoBehaviour
 
     public Text leveltext;
     public int currentLevel;
+
+    public AudioSource levelUpAS;
 
     [HideInInspector]
     public float currentExperince;
@@ -49,6 +52,7 @@ public class Experince : MonoBehaviour
             leveltext.text = currentLevel.ToString();
             PlayerHealth.instance.maxHealth += 5;
             PlayerHealth.instance.currentHealth += 5;
+            AudioManager.instance.PlayAudio(levelUpAS);
         }
     }
 }

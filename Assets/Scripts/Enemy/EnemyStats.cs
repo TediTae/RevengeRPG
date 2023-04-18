@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class EnemyStats : MonoBehaviour
 
     HitEffect effect;
     Rigidbody2D rb;
+
+    public AudioSource hitAS, flameAS;
 
     public float damage;
 
@@ -36,6 +39,7 @@ public class EnemyStats : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         currentHealth -= dmg;
+        AudioManager.instance.PlayAudio(hitAS);
 
                if (player.position.x < transform.position.x)
         {
@@ -55,6 +59,7 @@ public class EnemyStats : MonoBehaviour
             Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(gameObject);
             Experince.instance.expMod(expToGive);
+            AudioManager.instance.PlayAudio(flameAS);
         }
     }
     

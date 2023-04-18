@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerKontroller : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerKontroller : MonoBehaviour
     public float groundCheckRadius;
     public float attackRate = 2f;
     float nextAttack = 0;
+
+    public AudioSource swordAS;
 
 
     private bool isFacingRight = true;
@@ -134,6 +137,7 @@ public class PlayerKontroller : MonoBehaviour
         if(numb == 0)
         {
             anim.SetTrigger("Attack1");
+            AudioManager.instance.PlayAudio(swordAS);
         }
         else if(numb == 1)
         {
