@@ -271,7 +271,7 @@ MonoBehaviour:
   hitAS: {fileID: 408118650}
   flameAS: {fileID: 0}
   damage: 20
-  knockBackForceX: 500
+  knockBackForceX: 10
   knockBackForceY: 60
   player: {fileID: 441484130}
   expToGive: 50
@@ -955,7 +955,7 @@ MonoBehaviour:
   hitAS: {fileID: 408118650}
   flameAS: {fileID: 1209042951}
   damage: 20
-  knockBackForceX: 500
+  knockBackForceX: 10
   knockBackForceY: 60
   player: {fileID: 441484130}
   expToGive: 50
@@ -17084,6 +17084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7116fa275934e4075a5d0d43edd8ca99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &927993150
 GameObject:
   m_ObjectHideFlags: 0
