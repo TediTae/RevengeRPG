@@ -28,7 +28,8 @@ public class AudioManager : MonoBehaviour
 
     public void MasterVolume()
     {
-        musicMixer.SetFloat("masterVolume", masterSldr.value);
+        DataManager.instance.SetMusicData(masterSldr.value);
+        musicMixer.SetFloat("masterVolume", PlayerPrefs.GetFloat("MusicVolume"));
     }
 
     public void EffectVolume()
@@ -39,13 +40,15 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         PlayAudio(BGM);
-        masterSldr.value = masterVol;
-        effectSldr.value = effectVol;
+        //masterSldr.value = masterVol;
+        //effectSldr.value = effectVol;
 
         masterSldr.minValue = -80;
         masterSldr.maxValue = 20;
         effectSldr.minValue = -80;
         effectSldr.maxValue = 20;
+
+        masterSldr.value = PlayerPrefs.GetFloat("MusicVolume", 0f);
     }
 
     // Update is called once per frame

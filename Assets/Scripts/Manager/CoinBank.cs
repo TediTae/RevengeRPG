@@ -21,18 +21,22 @@ public class CoinBank : MonoBehaviour
 
     void Start()
     {
+        bank = PlayerPrefs.GetInt("CoinAmount", 0);
         bankText.text = "x " + bank.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        bankText.text = "x " + bank.ToString();
     }
 
     public void Money(int coinCollected)
     {
         bank += coinCollected;
         bankText.text = "x " + bank.ToString();
+
+        //DataManager.instance.CurrentCoin(bank);
+        //bank = PlayerPrefs.GetInt("CoinAmount");
     }
 }

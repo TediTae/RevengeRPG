@@ -28,6 +28,8 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        maxHealth = PlayerPrefs.GetFloat("MaxHealth",maxHealth);
+        currentHealth = PlayerPrefs.GetFloat("CurrentHealth", currentHealth);
         anim = GetComponent<Animator>();
     }
 
@@ -46,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
         if (collision.CompareTag("Enemy") && !isImnume)
         {
             currentHealth -= collision.GetComponent<EnemyStats>().damage;
+
             StartCoroutine(Immunity());
             anim.SetTrigger("Hit");
 
