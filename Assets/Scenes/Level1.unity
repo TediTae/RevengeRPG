@@ -271,11 +271,7 @@ MonoBehaviour:
   hitAS: {fileID: 408118650}
   flameAS: {fileID: 0}
   damage: 20
-<<<<<<< Updated upstream:Assets/Scenes/Level1.unity
   knockBackForceX: 10
-=======
-  knockBackForceX: 15
->>>>>>> Stashed changes:Assets/aight.unity
   knockBackForceY: 60
   player: {fileID: 441484130}
   expToGive: 50
@@ -3189,7 +3185,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.586875, y: -0.3759818}
+  m_Offset: {x: 0.73750496, y: -0.3759818}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3200,7 +3196,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18.527718, y: 6.032379}
+  m_Size: {x: 12.8289795, y: 6.032379}
   m_EdgeRadius: 0
 --- !u!1 &728364246
 GameObject:
@@ -17460,7 +17456,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: e4d2caee88399fa46a6d2b81f1e0c628, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1bed2c9d5f736994a811e4a7cbe53b11, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.229
+  m_Volume: 0.499
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -21744,11 +21740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5026434182781371969, guid: 21fc8c01c8f804ba29a6b1fb8ec7c627, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.445
+      value: -1.815
       objectReference: {fileID: 0}
     - target: {fileID: 5026434182781371969, guid: 21fc8c01c8f804ba29a6b1fb8ec7c627, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.001
+      value: 3.579
       objectReference: {fileID: 0}
     - target: {fileID: 5026434182781371969, guid: 21fc8c01c8f804ba29a6b1fb8ec7c627, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21786,10 +21782,6 @@ PrefabInstance:
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 453480370}
-    - target: {fileID: 5026434182781371973, guid: 21fc8c01c8f804ba29a6b1fb8ec7c627, type: 3}
-      propertyPath: currentHealth
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5026434182781371974, guid: 21fc8c01c8f804ba29a6b1fb8ec7c627, type: 3}
       propertyPath: swordAS
       value: 
