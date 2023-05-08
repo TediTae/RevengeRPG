@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class NinjaStar : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class NinjaStar : MonoBehaviour
     public float damage;
 
     public GameObject groundEffect;
+
+    public GameObject damageText;
 
     public PlayerKontroller player;
 
@@ -32,6 +35,9 @@ public class NinjaStar : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            damage = Mathf.Round(Random.Range(damage - 5, damage + 5));
+            GameObject textDam = Instantiate(damageText, new Vector2(collision.transform.position.x, collision.transform.position.y+1), Quaternion.identity);
+            textDam.GetComponent<TextMeshPro>().SetText(damage.ToString());
             collision.GetComponent<EnemyStats>().TakeDamage(damage);
             Destroy(gameObject);
         }

@@ -23,6 +23,8 @@ public class PlayerKontroller : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
 
+    WeaponStat weaponStat;
+
     public GameObject groundCheck;
 
     public Transform attackPoint;
@@ -36,7 +38,7 @@ public class PlayerKontroller : MonoBehaviour
 
     void Start()
     {
-
+        weaponStat = GetComponent<WeaponStat>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
@@ -150,7 +152,7 @@ public class PlayerKontroller : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-             enemy.GetComponent<EnemyStats>().TakeDamage(damage);
+             enemy.GetComponent<EnemyStats>().TakeDamage(weaponStat.DamageInput());
         }
         
     }

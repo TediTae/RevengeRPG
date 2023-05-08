@@ -140,6 +140,7 @@ MonoBehaviour:
   speed: 5
   damage: 10
   groundEffect: {fileID: 3918477294226701472, guid: fe8a07822fc014f3393535fbca498ff4, type: 3}
+  damageText: {fileID: 1877168604211346054, guid: 67e5577de6753c048b9d6b032acecf17, type: 3}
   player: {fileID: 5026434182781371974, guid: 21fc8c01c8f804ba29a6b1fb8ec7c627, type: 3}
 --- !u!114 &5750163476510461416
 MonoBehaviour:
