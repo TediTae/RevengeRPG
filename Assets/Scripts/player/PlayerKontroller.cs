@@ -5,6 +5,8 @@ using UnityEngine.Audio;
 
 public class PlayerKontroller : MonoBehaviour
 {
+    public static PlayerKontroller instance;
+
     private float movementDirection;
     public float speed;
     public float jumpPower;
@@ -34,6 +36,14 @@ public class PlayerKontroller : MonoBehaviour
 
     public GameObject ninjaStar;
     public Transform firePoint;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
 
 
     void Start()
