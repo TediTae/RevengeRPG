@@ -37,6 +37,9 @@ public class PlayerKontroller : MonoBehaviour
     public GameObject ninjaStar;
     public Transform firePoint;
 
+    public GameObject inventory;
+    bool invIsActive=false;
+
     private void Awake()
     {
         if(instance == null)
@@ -98,6 +101,17 @@ public class PlayerKontroller : MonoBehaviour
                 //PlayerPrefs.SetInt("StarAmount",StarBank.instance.bankStar);
             }
         }
+        if (Input.GetKeyDown(KeyCode.I) && !invIsActive)
+        {
+            inventory.SetActive(true);
+            invIsActive = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.I) && invIsActive)
+        {
+            inventory.SetActive(false);
+            invIsActive = false;
+        }
+
     }
 
     void CheckAnimations()

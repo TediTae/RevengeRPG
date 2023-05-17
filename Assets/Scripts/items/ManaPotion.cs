@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealtPotion : MonoBehaviour
+public class ManaPotion : MonoBehaviour
 {
-    public float healthToGive;
+    public float manaToGive;
 
     GameManagerTwo gameManager;
     Inventory inventtory;
