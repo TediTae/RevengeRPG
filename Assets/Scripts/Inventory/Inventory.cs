@@ -55,7 +55,7 @@ public class Inventory : MonoBehaviour
                         if(slots[j].transform.GetChild(0).gameObject.name == itemName)
                         {
                             inventoryItems[itemName] += itemAmount;
-                            amountText = slots[i].GetComponentInChildren<TextMeshProUGUI>();
+                            amountText = slots[j].GetComponentInChildren<TextMeshProUGUI>();
                             amountText.text = inventoryItems[itemName].ToString();
                             break;
                         }
