@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2cbf11fd1b0d442f19954b9f7cb9975b
+guid: 90c52245a79b0bf4ba061ed43efb9c31
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,28 +105,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inventory 4_0
+      name: inventory 3_0
       rect:
         serializedVersion: 2
-        x: 310
-        y: 256
-        width: 64
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 42
+        y: 143
+        width: 196
+        height: 272
+      alignment: 9
+      pivot: {x: 0.53124404, y: 0.5092693}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 857287670f1f74175a48a261914e5d45
-      internalID: 809618288
+      spriteID: 33d90d597f7cf624c954b05550bd5f6a
+      internalID: 278789833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inventory 4_1
+      name: inventory 3_1
       rect:
         serializedVersion: 2
         x: 102
@@ -134,14 +134,14 @@ TextureImporter:
         width: 634
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19de2ac647b22476daf46243b9919d7e
-      internalID: 1994791363
+      spriteID: c1b7439544581274e9916b5b38daa6d2
+      internalID: -948523747
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      inventory 4_0: 809618288
-      inventory 4_1: 1994791363
+      inventory 3_0: 278789833
+      inventory 3_1: -948523747
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

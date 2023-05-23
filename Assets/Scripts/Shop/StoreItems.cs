@@ -5,6 +5,7 @@ using TMPro;
 
 public class StoreItems : MonoBehaviour
 {
+
     //public string itemName;
     public int itemSellPrice;
     public int itemBuyPrice;
@@ -16,6 +17,7 @@ public class StoreItems : MonoBehaviour
     Inventory inventory;
 
     TextMeshProUGUI buyPriceText;
+
 
     void Start()
     {
@@ -34,7 +36,7 @@ public class StoreItems : MonoBehaviour
 
     public void BuyItems()
     {
-        if(itemBuyPrice <= CoinBank.instance.bank)
+        if (itemBuyPrice <= CoinBank.instance.bank)
         {
             CoinBank.instance.Money(-itemBuyPrice);
             inventory.CheckSlotsAvailable(itemToAdd, itemToAdd.name, amountToAdd);
